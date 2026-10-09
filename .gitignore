@@ -1,0 +1,12 @@
+.git
+build/
+cmake-build-*/
+.vscode/
+.idea/
+.env
+.env.*
+!.env.example
+*.o
+*.a
+*.so
+*.exe
