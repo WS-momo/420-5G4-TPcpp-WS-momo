@@ -31,8 +31,17 @@ void Book::checkOut(const string& borrowerId){
     setAvailability(false);
 }
 string Book::toString() const {
+    string statut="";
 
-    return "";
+    if(isAvailable == true){
+        statut = "Oui";
+    }else{
+        statut = "Non";
+    }
+    string msg = "Titre: " + title +"\nAuteur: " + author + "\nISBN: " +
+    isbn + "\nDisponible: " + statut + "\nPrêter à:" + borrowerId;
+    
+    return msg;
 }
 string Book::toFileFormat() const {
     
@@ -40,10 +49,5 @@ string Book::toFileFormat() const {
 }
 void Book::fromFileFormat(const string& line){
 
-    
+
 }
-// }    void checkOut(const string& borrowerId);
-//     void returnBook();
-//     string toString() const;
-//     string toFileFormat() const;
-//     void fromFileFormat(const string& line);
